@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Copy Nomor Rekening</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    #rekening { font-weight: bold; margin-bottom: 10px; }
+    button { padding: 8px 15px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<p>Nomor Rekening:</p>
+<p id="rekening">1234567890</p>
+<button id="copyBtn">Copy Rekening</button>
+
+<script>
+document.getElementById("copyBtn").onclick = function () {
+  const text = document.getElementById("rekening").innerText;
+
+  const temp = document.createElement("textarea");
+  temp.value = text;
+  document.body.appendChild(temp);
+  temp.select();
+  document.execCommand("copy");
+  document.body.removeChild(temp);
+
+  alert("Nomor rekening berhasil dicopy");
+};
+</script>
+
+</body>
+</html>

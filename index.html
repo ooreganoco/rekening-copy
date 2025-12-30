@@ -86,7 +86,7 @@
     <div id="rekening" class="rekening">6825223332</div>
 
     <button id="copyBtn">Copy Nomor Rekening</button>
-    <button id="closeBtn" class="close-btn">Kembali ke E-Invitation</button>
+    <button id="backBtn" class="close-btn">Kembali ke E-Invitation</button>
     
   </div>
 
@@ -105,9 +105,9 @@
     };
 
 
-    document.getElementById("closeBtn").onclick = function () {
+    document.getElementById("backBtn").onclick = function () {
       // menutup tab saat ini
-      window.close();
+      history.back();
     };
   </script>
 
